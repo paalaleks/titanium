@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "trailmade";
+  src: url("../public/fonts/trailmade.otf");
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 10 94% 6%;
+    --foreground: 32 65% 62%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 10 82% 13%;
+    --input: 10 82% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 28, 71%, 52%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 10 77% 28%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+}
+
+/* .hsxvalues {
+  --background: #1d0500;
+  --foreground: #dda25f;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --border: #3c0f05;
+  --input: #3c0f05;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --primary: #0f172a;
+  --primary-foreground: #f7f9fb;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --accent: #db7e2d;
+  --accent-foreground: #0f172a;
+  --destructive: #7e2210;
+  --destructive-foreground: #f7f9fb;
+  --ring: #94a3b7;
+} */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  .font-trailmade {
+    font-family: "trailmade";
+  }
+}
