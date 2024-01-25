@@ -15,6 +15,7 @@ interface Props {
     price?: string
     category?: string
   }
+  products: SanityProduct
 }
 
 export default async function Page({ searchParams }: Props) {

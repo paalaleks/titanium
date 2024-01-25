@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button"
 import { useToast } from "@/components/ui/use-toast"
 
 interface Props {
-  product: SanityProduct
   products: SanityProduct[]
 }
 
