@@ -7,29 +7,13 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { ProductGrid } from "@/components/product-grid"
 
-// import { ProductSort } from "@/components/product-sort"
-
 interface Props {
-  searchParams: {
-    date?: string
-    price?: string
-    category?: string
-  }
-  products: SanityProduct
+  products: SanityProduct[]
 }
 
-export default async function Page({ searchParams }: Props) {
-  const { date = "desc", price, category } = searchParams
-  const priceOrder = price ? `| order(price ${price})` : ""
-  const dateOrder = date ? `| order(_createdAt ${date})` : ""
-  const order = priceOrder + dateOrder
-
-  const productFilter = `_type == "product"`
-  const categoryFilter = category ? `&& "${category}" in categories ` : ""
-  const filter = `*[${productFilter}${categoryFilter}]`
-
+export default async function Page() {
   const products = await client.fetch(
-    groq`${filter} ${order}{
+    groq`*[_type == "product"]{
       _id,
       "id": _id,
       createdAt,
