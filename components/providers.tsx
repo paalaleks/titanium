@@ -12,6 +12,9 @@ interface Props {
 export function Providers({ children }: Props) {
   return (
     <CartProvider
+      cartMode="client-only"
+      successUrl="/success"
+      cancelUrl="/"
       currency="USD"
       shouldPersist={true}
       mode="payment"
