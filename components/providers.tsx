@@ -14,7 +14,7 @@ export function Providers({ children }: Props) {
     <CartProvider
       currency="USD"
       shouldPersist={true}
-      mode="checkout-session"
+      mode="payment"
       stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!}
     >
       <Toaster />
