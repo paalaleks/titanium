@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default async function Page({ params }: Props) {
-  const product = await client.fetch<SanityProduct[]>(
+  const product = await client.fetch<SanityProduct>(
     groq`*[_type == "product" && slug.current == "${params.slug}"][0]{
       _id,
       createdAt,
