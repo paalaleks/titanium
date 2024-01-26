@@ -11,7 +11,7 @@ interface Props {
   product: SanityProduct
 }
 export function ProductGallery({ product }: Props) {
-  const [selectedImage, setSelectedImage] = useState([0])
+  const [selectedImage, setSelectedImage] = useState(0)
 
   return (
     <div className="flex flex-col-reverse">
