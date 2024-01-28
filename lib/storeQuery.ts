@@ -14,5 +14,4 @@ export const storeQuery = groq`
     categories,
     description,
     "slug": slug.current
-  }
-`
+  }`

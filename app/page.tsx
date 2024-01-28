@@ -25,7 +25,12 @@ export default async function Page() {
       description,
       categories,
       "slug": slug.current
-    }`
+    }`,
+    {
+      next: {
+        revalidate: 3600,
+      },
+    }
   )
 
   return (
